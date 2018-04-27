@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<main>
+	<h2>Blog is too formal name for this things, these are just my scratches.</h2>
+
+	<!--// Blog Posts -->
+	{% if posts %}
+	{% for post in posts %}
+	<div>
+		<img src="{{ post.pic.url }}" alt="{{ post.title }}">
+		<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+		<p>{{ post.created }}</p>
+		<p>Last Updated: {{ post.updated }}</p>
+	</div>
+	{% endfor %}
+	{% else %}
+	<p>Sorry, I have not added any posts yet.</p>
+	{% endif %}
+</main>
+{% endblock %}
