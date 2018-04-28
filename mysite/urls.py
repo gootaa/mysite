@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^markdownx/', include('markdownx.urls')),
     url(r'^blog/', include('blog.urls')),
+    url(r'^work/', include('work.urls')),
 ]
 
 

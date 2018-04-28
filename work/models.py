@@ -31,6 +31,7 @@ class Feedback(models.Model):
     """
     client_name = models.CharField(max_length=250)
     client_pic = models.ImageField(upload_to='clients/', blank=True)
+    client_link = models.URLField()
     quote = models.TextField()
 
     def __str__(self):
