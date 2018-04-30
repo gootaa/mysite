@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h2>Contact</h2>
+{% if messages %}
+	<!--// Messages -->
+	<ul class="messages">
+	  {% for message in messages %}
+	  <li class="{{ message.tags }}">{{ message }}</li>
+	  {% endfor %}
+	  </ul>
+	{% endif %}
+
+<!--// Contact Links -->
+<section>
+	<h3>Let's Keep in Touch!</h3>
+	<div>
+    <a href="#" target="_blank">Twitter</a>
+    <a href="#" target="_blank">LinkedIn</a>
+    <a href="#" target="_blank">Github</a>
+	</div>
+	<div>
+		<a href="abdullah@goota.com">abdullah@goota.me</a>
+	</div>
+</section>
+
+<!--// Message Form -->
+<section>
+	<h3>Leave Me A Message</h3>
+	{% if form.errors %}
+	<p>Please fill the required fields with valid data</p>
+	{% endif %}
+	<form action="{% url 'send_message' %}" method="POST">
+		{{ form.as_p }}
+		{% csrf_token %}
+		<p><input type="submit" value="Send"></p>
+	</form>
+</section>
+{% endblock %}

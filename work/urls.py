@@ -7,4 +7,6 @@ urlpatterns = [
 	url(r'^project/(?P<project_slug>[-\w]+)/$',
 		app_views.project_detail,
 		name='project_detail'),
+	url(r'^contact/$', app_views.contact, name='contact'),
+	url(r'^send-message/$', app_views.send_message, name='send_message'),
 ]
