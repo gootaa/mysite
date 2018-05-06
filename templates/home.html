@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block content %}
+<!--// Site's Main Navigation -->
+<nav>
+	<h1><a href="{% url 'about' %}">About</a></h1>
+	<h1><a href="{% url 'work' %}">Work</a></h1>
+	<h1><a href="{% url 'contact' %}">Contact</a></h1>
+	<h1><a href="{% url 'post_list' %}">Blog</a></h1>
+</nav>
+{% endblock %}

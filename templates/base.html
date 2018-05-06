@@ -7,21 +7,24 @@
 	<title>{% block title %}Goota{% endblock %}</title>
 </head>
 <body>
+	{% block header %}
 	<!--// Header -->
 	<header>
-		<h1>Goota</h1>
+		<h1><a href="{% url 'home' %}">Goota</h1>
 
 		<nav>
-			<a href="#">About</a>
-			<a href="#">Work</a>
-			<a href="#">Contact</a>
-			<a href="#">Blog</a>
+			<a href="{% url 'about' %}">About</a>
+			<a href="{% url 'work' %}">Work</a>
+			<a href="{% url 'contact' %}">Contact</a>
+			<a href="{% url 'post_list' %}">Blog</a>
 		</nav>
 	</header>
+	{% endblock %}
 
 	{% block content %}
 	{% endblock %}
 
+	{% block footer %}
 	<!--// Footer -->
 	<footer>
 		<h2>Let's Keep in Touch!</h2>
@@ -31,8 +34,9 @@
             <a href="#" target="_blank">LinkedIn</a>
             <a href="#" target="_blank">Github</a>
 		</div>
-		<a href="#">Leave me a message</a>
+		<a href="{% url 'contact' %}#message-form">Leave me a message</a>
 		<p>&copy; 2018 goota.me</p>
 	</footer>
+	{% endblock %}
 </body>
 </html>
