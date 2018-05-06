@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Work{% endblock %}
+
+{% block content %}
+<!--// Projects list -->
+<section>
+	<h2>Projects</h2>
+	{% if projects %}
+	<ul>
+		{% for project in projects %}
+		<li>
+			<img src="{{ project.pic.url }}" alt="{{ project.name }}">
+			<h3><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></h3>
+		</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>Sorry, I have not added my projects yet.</p>
+	{% endif %}
+</section>
+
+{% if feedbacks %}
+<!--// Feedbacks list -->
+<section>
+	<h2>Feedbacks</h2>
+	<ul>
+		{% for feedback in feedbacks %}
+		<li>
+			<img src="{% if feedback.client_pic %}{{ feedback.client_pic.url }}{% endif %}" alt="{{ feedback.client_name }}">
+			<h3><a href="{{ feedback.client_link }}">{{ feedback.client_name }}</a></h3>
+			<p>{{ feedback.quote }}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}
+{% endblock %}
