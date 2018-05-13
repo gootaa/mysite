@@ -1,0 +1,42 @@
+/* Layout Styles
+---------------------------*/
+.main-wrapper {
+	padding: 20px;
+	display: grid;
+	grid-template-rows: auto auto;
+}
+
+
+/* Projects Styles
+---------------------------*/
+.project img {
+	max-width: 300px;
+	height: 300px;
+}
+
+.projects {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+/* Feedbacks Styles
+---------------------------*/
+.feedbacks {
+	display: grid;
+	grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+.client {
+	border-radius: 50%;
+	max-width: 200px;
+	height: 200px;
+}
+
+.feedback {
+	padding: 30px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}

@@ -1,0 +1,22 @@
+a {
+	color: #F0C808;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #FFDF44;
+}
+
+
+/* Header and Footer Styles
+---------------------------*/
+
+header, footer {
+	color: #fff;
+	background-color: #F0C808;
+}
+
+header a, footer a {
+	color: #fff;
+}

@@ -1,14 +1,25 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/work.css' %}?v=00005">
+<link rel="stylesheet" type="text/css" href="{% static 'css/project.css' %}?v=00005">
+
+{% endblock %}
 
 {% block title %}{{ project.name }}{% endblock %}
 
 {% block content %}
 <!-- Project section -->
 <article>
-	<h2>{{ project.name }}</h2>
-	<img src="{{ project.pic.url }}">
-	<p>
-		{{ project.formatted_markdown|safe }}
-	</p>
+	<div>
+		<img class="project-img" src="{{ project.pic.url }}">
+	</div>
+	<div>
+		<h2>{{ project.name }}</h2>
+		<p>
+			{{ project.formatted_markdown|safe }}
+		</p>
+	</div>
 </article>
 {% endblock %}

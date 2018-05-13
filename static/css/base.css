@@ -1,0 +1,100 @@
+/* Color palette
+	- about: #B71414;
+	- light about: #E81B1B;
+	- work: #086788;
+	- light work : #0B94C1;
+	- contact: #07A0C3;
+	- light contact: #09BBE2;
+	- blog: #F0C808;
+	- light blog: #FFDF44;
+
+/* Box Sizing Fix
+---------------------------*/
+*,
+*:before,
+*:after {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* Global Styles
+---------------------------*/
+html {
+	margin: 0;
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: 'Titillium Web', sans-serif;
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Courgette', cursive;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+img {
+	border-radius: 10px;
+}
+
+
+/* Layout Styles
+---------------------------*/
+.page {
+	height: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+/* Header Styles
+---------------------------*/
+header {
+	text-transform: uppercase;
+}
+
+#logo {
+	font-family: 'Love Ya Like A Sister', cursive;
+	color: #fff;
+	margin: 0;
+	padding: 10px;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-flow: column;
+	align-items: center;
+}
+
+.site-nav a {
+	padding: 5px;
+}
+
+.site-nav {
+	padding-right: 10px;
+}
+
+
+/* Footer Styles
+---------------------------*/
+footer {
+	text-align: center;
+}
+
+
+
+

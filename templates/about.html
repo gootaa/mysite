@@ -1,42 +1,57 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}?v=00006">
+{% endblock %}
 
 {% block title %}About{% endblock %}
 
 {% block content %}
-<h2>About</h2>
-<!--// Intro -->
-<section>
-	<p>
-		I thought alot about what type here. I tried to find fancy and catchy words, but I couldn't because that is not what i do.
-		Coding and building websites from scratch is what i do, In the following section there are some of my skills and tools i like using. also you can download <a href="#">my resume</a>.
-	</p>
-</section>
+<div class="main-wrapper">
+	<!--// Intro -->
+	<section>
+		<h2>About</h2>
+		<p>
+			I thought alot about what to type here. I tried to find fancy and catchy words, but I couldn't because that is not what i do.
+			Coding and building websites from scratch is what i do, In the following section there are some of my skills and tools i like using. also you can download <a href="#">my resume</a>.
+		</p>
+	</section>
 
-<!--// Technical Skills -->
-<section>
-	<h3>Technical Skills</h3>
-	<h4>Languages:</h4>
-	<ul>
-		<li>Python</li>
-		<li>HTML5/ CSS3/ Sass</li>
-		<li>Javascript</li>
-		<li>SQL</li>
-	</ul>
-	<h4>Tools, Frameworks, and Libraries:</h4>
-	<ul>
-		<li>Django</li>
-		<li>ReactJS</li>
-		<li>Bootstrap</li>
-		<li>Memcached</li>
-		<li>Git and GitHub</li>
-	</ul>
-	<h4>Software:</h4>
-	<ul>
-		<li>Windows</li>
-		<li>Linux</li>
-		<li>Sublime Text</li>
-		<li>GitKraken</li>
-		<li>Chrome Dev Tools</li>
-	</ul>
-</section>
+	<!--// Technical Skills -->
+	<section id="skills">
+		<div>
+			<h3>Technical Skills</h3>
+			<h4>Languages:</h4>
+			<ul>
+				<li>Python</li>
+				<li>HTML5/ CSS3/ Sass</li>
+				<li>Javascript</li>
+				<li>SQL</li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>Tools, Frameworks, and Libraries:</h4>
+			<ul>
+				<li>Django</li>
+				<li>ReactJS</li>
+				<li>Bootstrap</li>
+				<li>Memcached</li>
+				<li>Git and GitHub</li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>Software:</h4>
+			<ul>
+				<li>Windows</li>
+				<li>Linux</li>
+				<li>Sublime Text</li>
+				<li>GitKraken</li>
+				<li>Chrome Dev Tools</li>
+			</ul>
+		</div>
+	</section>
+</div>
 {% endblock %}
