@@ -1,21 +1,30 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}?v=00005">
+<link rel="stylesheet" type="text/css" href="{% static 'css/post_list.css' %}?v=00005">
+
+{% endblock %}
 
 {% block title %}Blog{% endblock %}
 
 {% block content %}
 <main>
-	<h2>Blog is too formal name for this things, these are just my scratches.</h2>
+	<h2 class="intro">Blog is so formal name for this thing, these are just my scratches.</h2>
 
 	<!--// Blog Posts -->
 	{% if posts %}
-	{% for post in posts %}
-	<div>
-		<img src="{{ post.pic.url }}" alt="{{ post.title }}">
-		<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-		<p>{{ post.created }}</p>
-		<p>Last Updated: {{ post.updated }}</p>
+	<div class="posts">
+		{% for post in posts %}
+		<div>
+			<img src="{{ post.pic.url }}" alt="{{ post.title }}">
+			<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+			<p>{{ post.created }}</p>
+			<p>Last Updated: {{ post.updated }}</p>
+		</div>
+		{% endfor %}
 	</div>
-	{% endfor %}
 	
 	{% else %}
 	<p>Sorry, I have not added any posts yet.</p>

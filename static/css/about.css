@@ -1,0 +1,37 @@
+a {
+	color: #B71414;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #E81B1B;
+}
+
+
+/* Header and Footer Styles
+---------------------------*/
+
+header, footer {
+	color: #fff;
+	background-color: #B71414;
+}
+
+header a, footer a {
+	color: #fff;
+}
+
+
+/* Layout Styles
+---------------------------*/
+.main-wrapper {
+	padding-left: 20px;
+	padding-right: 50px;
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+
+#skills {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}

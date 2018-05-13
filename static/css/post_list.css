@@ -1,0 +1,12 @@
+/* Posts Styles
+---------------------------*/
+.intro {
+	text-align: center;
+}
+
+.posts {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
