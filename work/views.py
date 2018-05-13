@@ -52,5 +52,7 @@ def send_message(request):
     			fail_silently=False,
 			)
 			messages.success(request, 'Your message was sent successfully!')
+		else:
+			messages.error(request, 'Please enter valid email and name')
 	return redirect('contact')
 

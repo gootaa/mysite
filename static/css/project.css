@@ -1,0 +1,13 @@
+/* Project Styles
+---------------------------*/
+.project-img {
+	max-width: 300px;
+	max-height: 700px;
+}
+
+
+article {
+	padding: 30px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}

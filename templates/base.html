@@ -5,38 +5,47 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}Goota{% endblock %}</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ 	<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Love+Ya+Like+A+Sister|Titillium+Web" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}?v=00005">
+	{% block extra_links %}{% endblock %}
 </head>
 <body>
 	{% block header %}
 	<!--// Header -->
-	<header>
-		<h1><a href="{% url 'home' %}">Goota</h1>
+	<div class="page">
+		<header>
+			<div class="header">
+				<h1 id="logo"><a href="{% url 'home' %}">Goota</a></h1>
 
-		<nav>
-			<a href="{% url 'about' %}">About</a>
-			<a href="{% url 'work' %}">Work</a>
-			<a href="{% url 'contact' %}">Contact</a>
-			<a href="{% url 'post_list' %}">Blog</a>
-		</nav>
-	</header>
-	{% endblock %}
+				<nav class="site-nav">
+					<a href="{% url 'about' %}">About</a>
+					<a href="{% url 'work' %}">Work</a>
+					<a href="{% url 'contact' %}">Contact</a>
+					<a href="{% url 'post_list' %}">Blog</a>
+				</nav>
+			</div>
+		</header>
+		{% endblock %}
 
-	{% block content %}
-	{% endblock %}
+		{% block content %}
+		{% endblock %}
 
-	{% block footer %}
-	<!--// Footer -->
-	<footer>
-		<h2>Let's Keep in Touch!</h2>
-		<div>
-			<a href="abdullah@goota.com">abdullah@goota.me</a>
-            <a href="#" target="_blank">Twitter</a>
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Github</a>
-		</div>
-		<a href="{% url 'contact' %}#message-form">Leave me a message</a>
-		<p>&copy; 2018 goota.me</p>
-	</footer>
-	{% endblock %}
+		{% block footer %}
+		<!--// Footer -->
+		<footer>
+			<h2>Let's Keep in Touch!</h2>
+			<div>
+				<a href="abdullah@goota.com"><i class="fas fa-envelope"></i></a>
+	      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+	      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+	      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+			</div>
+			<a href="{% url 'contact' %}#message-form">Leave me a message</a>
+			<p>&copy; 2018 goota.me</p>
+		</footer>
+		{% endblock %}
+	</div>
 </body>
 </html>

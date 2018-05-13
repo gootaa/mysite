@@ -1,0 +1,58 @@
+a {
+	color: #07A0C3;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #09BBE2;
+}
+
+
+/* Header and Footer Styles
+---------------------------*/
+
+header, footer {
+	color: #fff;
+	background-color: #07A0C3;
+}
+
+header a, footer a {
+	color: #fff;
+}
+
+
+/* Layout Styles
+---------------------------*/
+.main-wrapper {
+	text-align: center;
+}
+
+/* Messages Styles
+---------------------------*/
+.messages {
+	list-style-type: none;
+	padding-right: 20px;
+}
+.messages li {
+	font-size: 1.5em;
+	border-radius: 5px;
+}
+
+.success {
+	background-color: #74e05a;
+}
+
+.error {
+	background-color: #f33e3e;
+}
+
+/* Message Form Styles
+---------------------------*/
+#send {
+	color: #fff;
+	background-color: #07A0C3;
+	padding: 10px 30px;
+	border:0;
+	border-radius: 5px;
+}
