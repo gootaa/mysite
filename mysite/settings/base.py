@@ -29,6 +29,8 @@ SECRET_KEY = '%50o!2-i06o!h(hv713(4i0ml(7b19*6s8n@v1=z_cw@oh)*a3'
 
 ALLOWED_HOSTS = []
 
+ROOT_URLCONF = 'mysite.urls'
+
 
 # Application definition
 
