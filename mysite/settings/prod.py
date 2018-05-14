@@ -12,6 +12,6 @@ EMAIL_USE_TLS = True
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+        default=os.environ['DATABASE_URL']
     )
 }
