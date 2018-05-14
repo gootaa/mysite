@@ -3,7 +3,7 @@ from .base import *
 import os
 import dj_database_url
 
-DEBUG = os.environ['DEBUG']
+DEBUG = False
 SECRET_KEY = os.environ['SECRET_KEY']
 
 EMAIL_HOST = 'smtp.mailgun.org'
